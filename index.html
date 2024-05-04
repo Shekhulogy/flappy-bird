@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <audio src="assets/bgm.mp3" id="bgm-audio"></audio>
+    <audio src="assets/errorSound.mp3" id="jumpSound"></audio>
+    <div id="game-container">
+      <div id="volume">
+        <div id="volume-on"><i class="bx bxs-volume-full"></i></div>
+        <div id="volume-mute"><i class="bx bxs-volume-mute"></i></div>
+      </div>
+      <div id="game-over">
+        <h1>GAME OVER</h1>
+        <button type="button" id="restart-button">RESTART</button>
+      </div>
+      <h1 id="score">0</h1>
+      <img src="assets/bird.png" alt="" id="bird" />
+      <div id="pipe-container"></div>
+      <div id="ground"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

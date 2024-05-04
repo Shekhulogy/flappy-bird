@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "VT323", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  /* background-color: skyblue; */
+  background-image: url("assets/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#score {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  color: blanchedalmond;
+  font-weight: 300;
+  font-style: normal;
+  z-index: 1;
+}
+
+#bird {
+  position: absolute;
+  width: 55px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.pipe {
+  position: absolute;
+  width: 60px;
+  bottom: 0;
+}
+
+.upper-pipe {
+  background-image: url("assets/upperPipe.png");
+  background-position: center;
+  background-position-y: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lower-pipe {
+  background-image: url("assets/lowerPipe.png");
+  background-position: center;
+  background-position-y: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#ground {
+  position: absolute;
+  width: 100%; /* Take full width of the game container */
+  height: 50px; /* Adjust height as needed */
+  background-image: url("assets/ground.png"); /* Add the path to your ground texture image */
+  background-repeat: repeat-x; /* Repeat the image horizontally */
+  bottom: 0;
+}
+
+#game-over {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: none;
+}
+
+#game-over h1 {
+  text-align: center;
+  font-size: 70px;
+  color: blanchedalmond;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#restart-button {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #000000;
+  font-size: 24px;
+  font-family: "VT323", monospace;
+  background-color: rgb(204, 54, 0);
+  outline: 2px solid black;
+  border: 3px solid blanchedalmond;
+  z-index: 2;
+}
+
+#volume {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.bx {
+  font-size: 25px;
+  color: blanchedalmond;
+}
