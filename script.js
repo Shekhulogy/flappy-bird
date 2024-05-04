@@ -53,8 +53,6 @@ document.addEventListener("keydown", (event) => {
 
 gameContainer.addEventListener("click", () => {
   if (!gameStarted) {
-    bgmAudio.currentTime = 0;
-    bgmAudio.play();
     startGame();
   }
   jumpFlag = true;
@@ -211,10 +209,13 @@ let restartGame = () => {
 };
 
 restart.addEventListener("click", (event) => {
-  restartGame();
+  if (gameStarted) {
+    restartGame();
+  }
+
   event.preventDefault();
 });
 
-gameContainer.addEventListener("dblclick", () => {
-  restartGame();
-});
+// gameContainer.addEventListener("dblclick", () => {
+//   restartGame();
+// });
