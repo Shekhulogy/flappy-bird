@@ -20,7 +20,6 @@ let pipeInterval;
 let pipes = [];
 let score = 0;
 let isGameOver = false;
-let bgmAudioOn = true;
 
 volumeBtn.addEventListener("click", () => {
   let volumeOn = document.getElementById("volume-on");
@@ -28,13 +27,9 @@ volumeBtn.addEventListener("click", () => {
     muteBtn.style.display = "block";
     volumeOn.style.display = "none";
     bgmAudio.pause();
-    bgmAudioOn = false;
   } else {
     muteBtn.style.display = "none";
     volumeOn.style.display = "block";
-    bgmAudio.currentTime = 0;
-    bgmAudio.play();
-    bgmAudioOn = true;
   }
 });
 
